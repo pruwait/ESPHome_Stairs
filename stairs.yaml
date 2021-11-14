@@ -3,7 +3,7 @@
 #   Контроллер WT32-ETH01
 #   74AHCT125N (хуже 74HCT125N)
 #   APA102
-#  ESPHome version: 2021.10.3
+#
 #
 #
 
@@ -65,11 +65,12 @@ light:
             
             if (initial_run)
             {
-            //Определяем количество ступеней
+            /*Определяем количество ступеней*/
               stepsCount = sizeof(id(gStepFirstLed)) / sizeof(id(gStepFirstLed)[0]);
               i = 0;
               run = 0;
-              it.all() = Color::BLACK; //гасим ленту
+              /*гасим ленту*/
+              it.all() = Color::BLACK; 
               return;
             }
             /* final run */
